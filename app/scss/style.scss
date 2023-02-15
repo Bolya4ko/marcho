@@ -3,6 +3,84 @@
 @import "fonts";
 @import "global";
 
+.header {
+  padding: 40px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__novigation {
+  }
+
+  &__novigation-list {
+    display: flex;
+  }
+
+  &__novigation-item + .header__novigation-item {
+    margin-left: 25px;
+  }
+
+  &__novigation-item {
+  }
+ 
+  &__novigation-link {
+    position: relative;
+  }
+
+  &__novigation-img {
+  }
+
+  &__novigation-num {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: $accent-color;
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    top: -10px;
+    right: -16px;
+  }
+}
+.logo {
+
+  &__img {
+  }
+}
+.menu {
+
+  &__list {
+    display: flex;
+  }
+
+  &__item + .menu__item{
+    margin-left: 34px;
+  }
+
+  &__item {
+  }
+  &__link {
+    @extend %roboto-400;
+    color: $title-color;
+    text-transform: uppercase;
+    padding: 0 3px 5px;
+    border-bottom: 1px solid transparent;
+    transition: all 0.3s;
+    &:hover {
+      @extend %roboto-500;
+      color: $accent-color;
+      border-bottom: 1px solid $accent-color;
+    }
+  }
+  &__link.menu__link--active {
+    @extend %roboto-500;
+    color: $accent-color;
+  }
+}
 
 
 
