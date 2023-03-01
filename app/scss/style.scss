@@ -468,13 +468,134 @@
   }
 }
 
-.video {
+.products {
+  padding: 120px 0;
+  display: flex;
+
+  &__title {
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto 60px;
+  }
+
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px 30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 370px;
+  }
+
+  &__btn {
+    display: block;
+    width: 170px;
+    padding: 19px 0px;
+    text-align: center;
+    margin: 60px auto 0;
+    border: 1px solid #fe3e57;
+    color: $title-color;
+    line-height: 26px;
+    text-transform: uppercase;
+    letter-spacing: 3.2px;
+  }
 }
-.play {
+
+.product-cart {
+  position: relative;
+  overflow: hidden;
+  &:hover {
+    .product-cart__link-box {
+      transform: translateX(0);
+    }
+  }
+  &__img {
+    object-fit: cover;
+  }
+
+  &__start {
+    margin: 30px 0 20px;
+  }
+
+  &__title {
+    color: $title-color;
+    @extend %roboto-400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+
+  &__pay {
+    color: $title-color;
+    @extend %roboto-500;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &__old-pay {
+    margin-left: 20px;
+    color: #8d8d8d;
+    @extend %roboto-400;
+    text-decoration: line-through;
+  }
+
+  &__link-box {
+    background-color: #fff;
+    width: 212px;
+    border-radius: 25px;
+    position: absolute;
+    bottom: 150px;
+    transform: translateX(-150%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    transition: all 0.5s;
+    box-shadow: 0 5px 30px rgba(152, 152, 152, 0.2);
+  }
+
+  &__link {
+    padding: 0 25px;
+    display: inherit;
+    path {
+      transition: all 0.3s;
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid #ececec; 
+      border-right: 1px solid #ececec; 
+    }
+    &:hover {
+      path {
+        fill: $accent-color;
+      }
+    }
+  }
+
 }
-.button {
-}
-.title {
+
+.product-cart--sale {
+  position: relative;
+  &::before {
+    content: 'SALE';
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    top: 25px;
+    left: 25px;
+    background-color: $accent-color;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+  }
 }
 
 
