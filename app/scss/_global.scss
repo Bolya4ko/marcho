@@ -19,3 +19,19 @@ body {
   padding: 0 15px;
   margin: 0 auto;
 }
+
+.title {
+  color: $title-color;
+  @extend %roboto-700;
+  font-size: 48px;
+  line-height: 0.6;
+  text-align: center;
+  text-transform: uppercase;
+}
+.subtitle {
+  max-width: 523px;
+  margin: 0 auto 60px;
+  color: #8d8d8d;
+  @extend %quicksand-500;
+  text-align: center;
+}
